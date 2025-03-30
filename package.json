@@ -2,7 +2,7 @@
   "name": "aviation-weather-api",
   "version": "0.1.0",
   "author": "Erik Larson",
-  "description": "",
+  "description": "A simple utility application that fetches the latest METAR data using valid ICAO airport identifier",
   "license": "ISC",
   "scripts": {
     "build": "nest build",
