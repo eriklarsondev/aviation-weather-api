@@ -1,12 +1,11 @@
 import { Module } from '@nestjs/common'
-import { HttpModule } from '@nestjs/axios'
-import { MetarController } from './metar.controller'
-import { MetarService } from './metar.service'
 import { ConfigModule } from '@nestjs/config'
-
+import { HttpModule } from '@nestjs/axios'
+import { METARController } from './metar.controller'
+import { METARService } from './metar.service'
 @Module({
   imports: [ConfigModule.forRoot(), HttpModule],
-  controllers: [MetarController],
-  providers: [MetarService]
+  controllers: [METARController],
+  providers: [METARService]
 })
-export class MetarModule {}
+export class METARModule {}

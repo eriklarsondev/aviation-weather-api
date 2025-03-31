@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common'
-import { MetarModule } from './metar/metar.module'
+import { METARModule } from './metar/metar.module'
 
 @Module({
-  imports: [MetarModule]
+  imports: [METARModule]
 })
 export class AppModule {}
