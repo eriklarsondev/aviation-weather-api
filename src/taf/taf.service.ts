@@ -3,15 +3,15 @@ import { ConfigService } from '@nestjs/config'
 import { HttpService } from '@nestjs/axios'
 
 @Injectable()
-export class METARService {
+export class TAFService {
   constructor(
     private readonly configService: ConfigService,
     private readonly httpService: HttpService
   ) {}
 
-  async fetchMETAR(identifier: string): Promise<any> {
+  async fetchTAF(identifier: string) {
     const response = await this.httpService.axiosRef.get(
-      `${this.configService.get('BASE_PATH')}/metar/${identifier}`,
+      `${this.configService.get('BASE_PATH')}/taf/${identifier}`,
       {
         headers: {
           Authorization: `BEARER ${this.configService.get('API_KEY')}`

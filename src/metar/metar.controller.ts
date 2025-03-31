@@ -6,9 +6,9 @@ export class METARController {
   constructor(private readonly metarService: METARService) {}
 
   @Get(':identifier')
-  async getWeather(@Param('identifier') identifier: string): Promise<any> {
+  async fetchMETAR(@Param('identifier') identifier: string): Promise<any> {
     try {
-      return await this.metarService.getWeather(identifier)
+      return await this.metarService.fetchMETAR(identifier)
     } catch (err) {
       return err
     }
